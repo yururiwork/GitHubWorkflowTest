@@ -24,7 +24,7 @@ jobs:
           flutter-version: '3.22.2'
 
       - name: Install dependencies
-        run: flutter pub get
+        run: flutter pub get github_workflow_test/.
 
       - name: Run unit tests
         run: flutter test github_workflow_test/test/.
