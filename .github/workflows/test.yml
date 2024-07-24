@@ -27,5 +27,5 @@ jobs:
         run: flutter pub get github_workflow_test/.
 
       - name: Run unit tests
-        run: flutter test github_workflow_test/.
+        run: cd github_workflow_test/; flutter test
 
