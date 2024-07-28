@@ -1,0 +1,34 @@
+name: Flutter Test
+
+on:
+  workflow_dispatch:
+#  push:
+#    branches:
+#      - main
+#      - feature/*
+#  pull_request:
+#    branches:
+#      - main
+#      - feature/*
+
+jobs:
+  build:
+    runs-on: macos-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.22.2'
+
+      - name: Install dependencies
+        run: flutter pub get github_workflow_test/.
+      - name: Analyze
+        run: flutter analyze
+
+      - name: Run unit tests
+        run: cd github_workflow_test/; flutter test
+
