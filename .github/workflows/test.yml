@@ -1,15 +1,13 @@
 name: Flutter Test
 
 on:
-  workflow_dispatch:
-#  push:
-#    branches:
-#      - main
-#      - feature/*
-#  pull_request:
-#    branches:
-#      - main
-#      - feature/*
+#  workflow_dispatch:
+  push:
+    branches:
+      - '*'
+  pull_request:
+    branches:
+      - '*'
 
 jobs:
   build:
