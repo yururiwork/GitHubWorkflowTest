@@ -25,6 +25,8 @@ jobs:
 
       - name: Install dependencies
         run: flutter pub get github_workflow_test/.
+      - name: Analyze
+        run: flutter analyze
 
       - name: Run unit tests
         run: cd github_workflow_test/; flutter test

@@ -12,6 +12,7 @@ import 'package:github_workflow_test/main.dart';
 
 void main() {
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {
+    final noUseValue = 1;
     // Build our app and trigger a frame.
     await tester.pumpWidget(const MyApp());
 
